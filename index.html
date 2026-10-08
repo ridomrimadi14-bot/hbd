@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     OPENING
+========================= -->
+
+<section class="page active" id="home">
+
+    <div class="opening">
+
+        <div class="sparkle">✦</div>
+
+        <h1>Happy Birthday</h1>
+
+        <p>
+            A little surprise<br>
+            especially for you
+        </p>
+
+        <button onclick="showPage('choose')">
+            Open Surprise
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CHOOSE SURPRISE
+========================= -->
+
+<section class="page" id="choose">
+
+    <div class="choose-container">
+
+        <h1>Choose the Surprise</h1>
+
+        <p class="subtitle">
+            Ada beberapa kejutan buat kamu ♡
+        </p>
+
+
+        <div class="menu">
+
+            <div class="menu-item"
+                 onclick="showPage('letter')">
+
+                <div class="menu-icon">💌</div>
+
+                <h2>Ucapan</h2>
+
+                <p>Special Letter</p>
+
+            </div>
+
+
+            <div class="menu-item"
+                 onclick="showPage('memories')">
+
+                <div class="menu-icon">📷</div>
+
+                <h2>Memories</h2>
+
+                <p>Our Memories</p>
+
+            </div>
+
+
+            <div class="menu-item"
+                 onclick="showPage('music')">
+
+                <div class="menu-icon">🎵</div>
+
+                <h2>Music</h2>
+
+                <p>Your Song</p>
+
+            </div>
+
+
+            <div class="menu-item"
+                 onclick="showPage('gift')">
+
+                <div class="menu-icon">🎁</div>
+
+                <h2>Gift</h2>
+
+                <p>Special Gift</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section class="page" id="letter">
+
+    <button class="back" onclick="showPage('choose')">
+        BACK
+    </button>
+
+    <div class="letter-container">
+
+        <div class="rose rose-left">🌹</div>
+        <div class="rose rose-right">🌹</div>
+
+        <h1>For You</h1>
+
+        <div class="letter-content">
+
+            <h2>Happy Birthday, Sasa</h2>
+
+            <p>
+                Selamat ulang tahun! 🎂
+            </p>
+
+            <p>
+                Semoga di umur yang baru ini,
+                kamu selalu diberikan kesehatan,
+                kebahagiaan, dan banyak hal baik.
+            </p>
+
+            <p>
+                Semoga semua impian dan cita-cita
+                yang kamu punya bisa tercapai.
+                Jangan pernah berhenti mengejar
+                apa yang kamu inginkan.
+            </p>
+
+            <p>
+                Terima kasih sudah menjadi seseorang
+                yang sangat berarti. 💙
+            </p>
+
+            <p class="signature">
+                With love ♡
+            </p>
+
+        </div>
+
+        <img class="letter-photo"
+             src="sasa1.jpeg"
+             alt="Foto">
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section class="page" id="memories">
+
+    <button class="back" onclick="showPage('choose')">
+        BACK
+    </button>
+
+    <div class="memories-container">
+
+        <h1>Our Memories</h1>
+
+        <p>
+            Some moments to remember 📷
+        </p>
+
+
+        <div class="gallery">
+
+            <div class="photo-card">
+                <img src="sasa2.jpeg">
+            </div>
+
+            <div class="photo-card">
+                <img src="sasa3.jpeg">
+            </div>
+
+            <div class="photo-card">
+                <img src="sasa4.jpeg">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<section class="page" id="music">
+
+    <button class="back" onclick="showPage('choose')">
+        BACK
+    </button>
+
+    <div class="music-container">
+
+        <h1>Your Song</h1>
+
+        <p>
+            A special song for you ♡
+        </p>
+
+        <div class="youtube-box">
+
+            <iframe
+                src="https://www.youtube.com/embed/igdMxq_MQF8"
+                title="Birthday Song"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <h2>🎵 Special Song</h2>
+
+        <p>
+            Play this song while enjoying your birthday surprise.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GIFT / ENVELOPE
+========================= -->
+
+ <section class="page" id="gift">
+
+    <button class="back" onclick="showPage('choose')">
+        BACK
+    </button>
+
+    <div class="gift-scene">
+
+        <!-- TEKS AWAL -->
+        <div class="gift-title" id="giftTitle">
+            <h1>A Little Gift For You</h1>
+            <p>Click the gift 💌</p>
+        </div>
+
+
+        <!-- AMPL0P -->
+        <div class="envelope gift-envelope"
+             onclick="openFlowerGift()"
+             id="giftEnvelope">
+
+            <div class="envelope-back"></div>
+
+            <div class="letter-paper">
+
+                <h2>For You ♡</h2>
+
+                <p>
+                    Ada sesuatu yang spesial
+                    untuk kamu...
+                </p>
+
+            </div>
+
+            <div class="envelope-front"></div>
+
+            <div class="envelope-flap"></div>
+
+        </div>
+
+
+        <!-- TAMAN BUNGA -->
+        <div class="flower-garden" id="flowerGarden">
+
+            <div class="firefly firefly1">✦</div>
+            <div class="firefly firefly2">✦</div>
+            <div class="firefly firefly3">✦</div>
+            <div class="firefly firefly4">✦</div>
+            <div class="firefly firefly5">✦</div>
+
+
+            <!-- BUNGA 1 -->
+            <div class="gift-flower gf1">
+
+                <div class="gift-stem"></div>
+
+                <div class="gift-leaf left"></div>
+                <div class="gift-leaf right"></div>
+
+                <div class="gift-petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="gift-center"></div>
+
+            </div>
+
+
+            <!-- BUNGA 2 -->
+            <div class="gift-flower gf2">
+
+                <div class="gift-stem"></div>
+
+                <div class="gift-leaf left"></div>
+                <div class="gift-leaf right"></div>
+
+                <div class="gift-petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="gift-center"></div>
+
+            </div>
+
+
+            <!-- BUNGA 3 -->
+            <div class="gift-flower gf3">
+
+                <div class="gift-stem"></div>
+
+                <div class="gift-leaf left"></div>
+                <div class="gift-leaf right"></div>
+
+                <div class="gift-petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="gift-center"></div>
+
+            </div>
+
+
+            <!-- BUNGA 4 -->
+            <div class="gift-flower gf4">
+
+                <div class="gift-stem"></div>
+
+                <div class="gift-leaf left"></div>
+                <div class="gift-leaf right"></div>
+
+                <div class="gift-petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="gift-center"></div>
+
+            </div>
+
+
+            <!-- BUNGA 5 -->
+            <div class="gift-flower gf5">
+
+                <div class="gift-stem"></div>
+
+                <div class="gift-leaf left"></div>
+                <div class="gift-leaf right"></div>
+
+                <div class="gift-petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="gift-center"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- UCAPAN -->
+        <div class="flower-message" id="flowerMessage">
+
+            <div class="heart">♡</div>
+
+            <h1>For Someone Special</h1>
+
+            <p>
+                Semoga hidup kamu selalu dipenuhi
+                kebahagiaan, seperti bunga-bunga
+                yang terus bermekaran. 🌸
+            </p>
+
+            <p>
+                Happy Birthday! 🎂
+            </p>
+
+        </div>
+
+
+        <!-- TOMBOL RESET -->
+        <button
+            class="flower-reset"
+            id="flowerReset"
+            onclick="resetFlowerGift()">
+
+            🌷 Again
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<audio id="musicPlayer">
+    <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
