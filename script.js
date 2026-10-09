@@ -2,23 +2,19 @@
    PINDAH HALAMAN
 ========================= */
 
-function showPage(pageId) {
 
-    const pages =
-        document.querySelectorAll(".page");
+function showPage(pageId) {
+    const pages = document.querySelectorAll(".page");
 
     pages.forEach(function(page) {
-
         page.classList.remove("active");
-
     });
 
+    const selectedPage = document.getElementById(pageId);
 
-    const selected =
-        document.getElementById(pageId);
-
-    selected.classList.add("active");
-
+    if (selectedPage) {
+        selectedPage.classList.add("active");
+    }
 }
 
 
