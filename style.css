@@ -1967,3 +1967,189 @@ button:hover {
         margin-top: 10px;
     }
 }
+
+
+/* ===== FIX GIFT DI HP ===== */
+@media screen and (max-width: 600px) {
+
+    #gift {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        align-items: flex-start;
+    }
+
+    #gift .back {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 99999;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    /* Area utama Gift */
+    #gift .gift-scene {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 100px 12px 80px;
+        overflow: visible;
+    }
+
+    /* Judul Gift */
+    #gift .gift-title {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    #gift .gift-title h1 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    #gift .gift-title p {
+        font-size: 15px;
+    }
+
+    /* Amplop */
+    #gift .gift-envelope {
+        position: relative;
+        top: auto;
+        left: auto;
+        flex-shrink: 0;
+        width: 260px;
+        height: 175px;
+        margin: 35px auto;
+        transform: none;
+    }
+
+    #gift .gift-envelope.opened {
+        transform: translateY(100px) scale(.6);
+        opacity: 0;
+    }
+
+    #gift .envelope-front {
+        border-left-width: 130px;
+        border-right-width: 130px;
+        border-bottom-width: 95px;
+    }
+
+    #gift .envelope-flap {
+        border-left-width: 130px;
+        border-right-width: 130px;
+        border-top-width: 95px;
+    }
+
+    #gift .letter-paper {
+        left: 15px;
+        width: 230px;
+        height: 145px;
+        padding: 18px;
+        font-size: 13px;
+    }
+
+    /* Taman bunga */
+    #gift .flower-garden {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 350px;
+        flex-shrink: 0;
+        margin-top: 20px;
+        overflow: visible;
+    }
+
+    #gift .gift-flower {
+        width: 65px;
+        height: 280px;
+        bottom: 0;
+        transform-origin: bottom center;
+    }
+
+    #gift .gf1 { left: 0; }
+    #gift .gf2 { left: 20%; }
+    #gift .gf3 { left: 40%; }
+    #gift .gf4 { left: 60%; }
+    #gift .gf5 { left: 80%; }
+
+    #gift .gift-stem {
+        left: 30px;
+        height: 210px;
+        width: 6px;
+    }
+
+    #gift .gift-leaf {
+        width: 40px;
+        height: 22px;
+        bottom: 75px;
+    }
+
+    #gift .gift-petals {
+        top: 15px;
+        left: 7px;
+        transform-origin: center;
+        scale: .8;
+    }
+
+    #gift .gift-center {
+        top: 37px;
+        left: 29px;
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Pesan setelah bunga mekar */
+    #gift .flower-message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(100% - 24px);
+        max-width: 400px;
+        padding: 22px 16px;
+        box-sizing: border-box;
+        z-index: 100;
+    }
+
+    #gift .flower-message h1 {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    #gift .flower-message p {
+        font-size: 13px;
+        line-height: 1.7;
+        overflow-wrap: break-word;
+    }
+
+    #gift .heart {
+        font-size: 40px;
+    }
+
+    /* Tombol ulang animasi */
+    #gift .flower-reset {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin: 20px auto 0;
+        z-index: 200;
+    }
+
+    #gift .flower-reset.active {
+        display: block;
+        opacity: 1;
+    }
+}
